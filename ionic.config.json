@@ -1,0 +1,7 @@
+{
+  "name": "super-task-center",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
