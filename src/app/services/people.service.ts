@@ -11,7 +11,7 @@ export class PeopleService {
       id: 0,
       name: 'María',
       surname: 'García',
-      age: 42,
+      age: 43,
       image: ''
     },
     {
