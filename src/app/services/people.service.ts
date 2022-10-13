@@ -19,28 +19,28 @@ export class PeopleService {
       name: 'Estefanía',
       surname: 'Jiménez',
       age: 33,
-      image: ''
+      image: 'https://picsum.photos/200/300'
     },
     {
       id: 2,
       name: 'Antonio',
       surname: 'Pérez',
       age: 23,
-      image: ''
+      image: 'https://picsum.photos/200/300'
     },
     {
       id: 3,
       name: 'Andrés',
       surname: 'Ramírez',
       age: 20,
-      image: ''
+      image: 'https://picsum.photos/200/300'
     },
     {
       id: 4,
       name: 'Rosalía',
       surname: 'Escobar',
       age: 19,
-      image: ''
+      image: 'https://picsum.photos/200/300'
     },
   ]
   constructor() { }
