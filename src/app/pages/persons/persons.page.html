@@ -5,21 +5,24 @@
 </ion-header>
 
 <ion-content>
-  <ion-grid>
-    <ion-row>
-      <ion-col size="6">
+  <ion-item>
+    <ion-button (click)="onNewPerson()" style="margin:10px;width:50px;height:50px;--border-radius:50%" slot="start" icon-only><ion-icon style="zoom:2" name="add-outline"></ion-icon></ion-button>
+  </ion-item>
+  <!-- <ion-grid> -->
+    <!-- <ion-row> -->
+      <!-- <ion-col size="6"> -->
         <ion-item *ngFor="let person of getPeople()">
           <app-person  [personInput]="person"></app-person>
-          <ion-button><ion-icon name="create-outline"></ion-icon></ion-button>
-          <ion-button><ion-icon name="trash-outline"></ion-icon></ion-button>
+          <ion-button (click)="onEditPerson(person)"><ion-icon name="create-outline"></ion-icon></ion-button>
+          <ion-button (click)="onDeletePerson(person)"><ion-icon name="trash-outline"></ion-icon></ion-button>
         </ion-item>
-      </ion-col>
-      <ion-col size="6">
-        <ion-item>Formulario creación usuario</ion-item>
-        <form [formGroup]="form">
-          <ion-item>
-            <ion-label position="floating">
-              Nombre
+      <!-- </ion-col> -->
+      <!-- <ion-col size="6"> -->
+        <!-- <ion-item>Formulario creación usuario</ion-item> -->
+        <!-- <form [formGroup]="form"> -->
+          <!-- <ion-item> -->
+            <!-- <ion-label position="floating"> -->
+              <!-- Nombre
             </ion-label>
             <ion-input type="text" placeholder="Introduce tu nombre" formControlName="name"></ion-input>
           </ion-item>
@@ -38,7 +41,7 @@
       </ion-col>
     </ion-row>
   </ion-grid>
-    
+     -->
 
 </ion-content>
 

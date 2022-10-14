@@ -6,7 +6,7 @@
 
 <ion-content>
   <ion-item>Formulario creación usuario</ion-item>
-  <form [formGroup]="form">
+  <form [formGroup]="form" (ngSubmit)="onSubmit()" (keyup.enter)="onSubmit()">
     <ion-item>
       <ion-label position="floating"> Nombre </ion-label>
       <ion-input
@@ -44,7 +44,9 @@
       ></ion-input>
     </ion-item>
 
-    <ion-button type="submit" (click)="createPerson()">Añadir</ion-button>
+    <ion-button [disabled]="!form.valid" type="submit">{{mode=="Edit"?"Modificar":"Añadir"}}</ion-button> 
+    <!-- Submit del modal -->
+    <!-- (click)="createPerson()" -->
   </form>
 </ion-content>
   

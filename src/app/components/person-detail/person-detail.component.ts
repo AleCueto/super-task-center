@@ -31,7 +31,7 @@ export class PersonDetailComponent implements OnInit {
       id:[null],
       name:['', [Validators.required]],
       surname:['', [Validators.required]],
-      nickname:['', [Validators.required]],
+      nickname:[''],
       age:['', [Validators.required]],
       picture:['']
     });
@@ -51,10 +51,13 @@ export class PersonDetailComponent implements OnInit {
     }, 3000);
   }
 
-  //   onSubmit(){
-    
-  //   this.modal.dismiss({person: this.form.value, mode:this.mode}, 'ok');
-  // }
+  onSubmit(){
+    this.modal.dismiss({person: this.form.value, mode:this.mode}, 'ok');
+  }
+
+  onDismiss(result){
+    this.modal.dismiss(null, 'cancel');
+  }
 
   getPeople(): Person[] {
     return this.personSVC.getPeople();
