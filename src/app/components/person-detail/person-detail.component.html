@@ -1,0 +1,50 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Datos de la persona</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-item>Formulario creación usuario</ion-item>
+  <form [formGroup]="form">
+    <ion-item>
+      <ion-label position="floating"> Nombre </ion-label>
+      <ion-input
+      type="text"
+      placeholder="Introduce tu nombre"
+      formControlName="name"
+      ></ion-input>
+    </ion-item>
+    
+    <ion-item>
+      <ion-label position="floating"> Apellidos </ion-label>
+      <ion-input
+      type="text"
+      placeholder="Introduce tus apellidos"
+      formControlName="surname"
+      ></ion-input>
+    </ion-item>
+
+    
+    <ion-item>
+      <ion-label position="floating"> Mote </ion-label>
+      <ion-input
+      type="text"
+      placeholder="Introduce tu mote"
+      formControlName="nickname"
+      ></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating"> Edad </ion-label>
+      <ion-input
+      type="number"
+      placeholder="Introduce tu edad"
+      formControlName="age"
+      ></ion-input>
+    </ion-item>
+
+    <ion-button type="submit" (click)="createPerson()">Añadir</ion-button>
+  </form>
+</ion-content>
+  
