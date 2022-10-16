@@ -18,7 +18,7 @@ export class PeopleService {
       id: 1,
       name: 'Estefanía',
       surname: 'Jiménez',
-      age: 33,
+      age: 34,
       image: 'https://picsum.photos/200/300'
     },
     {
