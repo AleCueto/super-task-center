@@ -1,0 +1,17 @@
+<ion-item>
+  <ion-avatar slot="start">
+    <img *ngIf="taskInput.image == ''" alt="Silhouette of a person's head" src="https://ionicframework.com/docs/img/demos/avatar.svg" />
+    <img *ngIf="taskInput.image != ''" src="{{taskInput.image}}" />
+  </ion-avatar>
+    <ion-label>
+      <h1>
+      {{ taskInput.name }}
+      </h1>
+      <h2>
+      {{taskInput.timeInSeconds}}
+      </h2>
+      <h3>
+      {{taskInput.difficulty}}
+      </h3>
+    </ion-label>
+  </ion-item>

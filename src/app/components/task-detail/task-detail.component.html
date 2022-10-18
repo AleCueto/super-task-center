@@ -1,11 +1,11 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>Datos de la persona</ion-title>
+    <ion-title>Datos de la tarea</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-  <ion-item>Formulario {{mode=="Edit"?"edición":"creación"}} usuario</ion-item>
+  <ion-item>Formulario {{mode=="Edit"?"edición":"creación"}} de una tarea</ion-item>
   <form [formGroup]="form" (ngSubmit)="onSubmit()" (keyup.enter)="onSubmit()">
     <ion-item>
       <ion-label position="floating"> Nombre </ion-label>
@@ -17,32 +17,32 @@
     </ion-item>
     
     <ion-item>
-      <ion-label position="floating"> Apellidos </ion-label>
+      <ion-label position="floating"> Tiempo en segundos </ion-label>
       <ion-input
-      type="text"
+      type="number"
       placeholder="Introduce tus apellidos"
-      formControlName="surname"
+      formControlName="timeInSeconds"
       ></ion-input>
     </ion-item>
 
     
     <ion-item>
-      <ion-label position="floating"> Mote </ion-label>
+      <ion-label position="floating"> Descripción </ion-label>
       <ion-input
       type="text"
       placeholder="Introduce tu mote"
-      formControlName="nickname"
+      formControlName="description"
       ></ion-input>
     </ion-item>
 
-    <ion-item>
+    <!-- <ion-item>
       <ion-label position="floating"> Edad </ion-label>
       <ion-input
       type="number"
       placeholder="Introduce tu edad"
       formControlName="age"
       ></ion-input>
-    </ion-item>
+    </ion-item> -->
 
     <ion-button [disabled]="!form.valid" type="submit">{{mode=="Edit"?"Modificar":"Añadir"}}</ion-button> 
     <!-- Submit del modal -->
