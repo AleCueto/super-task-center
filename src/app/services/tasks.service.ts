@@ -12,7 +12,7 @@ export class TasksService {
       difficulty: "facil",
       name: "hacer la cama",
       description: "Debes hacer la cama",
-      image: "https://picsum.photos/200/300", //url to an image
+      image: "https://drive.google.com/uc?export=view&id=1S-uobmzUCtIS227qnkxcEqkKyq9dgrpd", //url to an image
     },
     {
       id: 1,
@@ -20,7 +20,7 @@ export class TasksService {
       difficulty: "medio",
       name: "recoger la mesa",
       description: "Debes recoger la mesa",
-      image: "https://picsum.photos/200/300", //url to an image
+      image: "https://drive.google.com/uc?export=view&id=1UabOOUOLSjbGWaeg0yp-VJvOrvfD_EHz", //url to an image
     },
     {
       id: 2,
@@ -28,7 +28,7 @@ export class TasksService {
       difficulty: "dificil",
       name: "lavar los platos",
       description: "Debes lavar los platos",
-      image: "https://picsum.photos/200/300", //url to an image
+      image: "https://drive.google.com/uc?export=view&id=1YEZb7GDA_z0bGJRZvPfkkpdtVs8pytxG", //url to an image
     },
     {
       id: 3,
@@ -36,7 +36,7 @@ export class TasksService {
       difficulty: "facil",
       name: "sacar al perro",
       description: "Debes sacar al perro",
-      image: "https://picsum.photos/200/300", //url to an image
+      image: "https://drive.google.com/uc?export=view&id=14-C4NYtoRRb4z4pOzi_xl7xoR7d-5Ei2", //url to an image
     }
 
   ]

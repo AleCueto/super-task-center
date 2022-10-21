@@ -27,6 +27,7 @@ const routes: Routes = [
     path: 'assignments',
     loadChildren: () => import('./pages/assignments/assignments.module').then( m => m.AssignmentsPageModule)
   }
+
 ];
 
 @NgModule({

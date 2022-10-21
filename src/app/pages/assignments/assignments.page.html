@@ -5,5 +5,10 @@
 </ion-header>
 
 <ion-content>
-
+  <ion-item *ngFor="let assignment of getAssignments()">
+    <app-assignment [assignmentInput]="assignment"></app-assignment>
+    <!-- <app-person  [assigments]="person"></app-person>
+    <ion-button (click)="onEditPerson(person)"><ion-icon name="create-outline"></ion-icon></ion-button>
+    <ion-button (click)="onDeletePerson(person)"><ion-icon name="trash-outline"></ion-icon></ion-button> -->
+  </ion-item>
 </ion-content>
