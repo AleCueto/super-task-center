@@ -1,6 +1,7 @@
 <ion-item> 
+    {{getPerson(assignmentInput.id_person).name}} 
     <ion-avatar slot="start"> <img src="{{getPerson(assignmentInput.id_person).image}}" /> </ion-avatar>
-    {{getPerson(assignmentInput.id_person).name}} <ion-icon name="link-outline"></ion-icon> 
-    {{getTask(assignmentInput.id_task).name}} 
+    <ion-icon name="link-outline"></ion-icon> 
     <ion-avatar slot="end"> <img src="{{getTask(assignmentInput.id_task).image}}" /> </ion-avatar>
+    {{getTask(assignmentInput.id_task).name}} 
 </ion-item>
