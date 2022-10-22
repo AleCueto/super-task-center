@@ -1,0 +1,85 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Datos de la asignación</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-item>Formulario  {{mode=="Edit"?"edición":"creación"}} asignacion</ion-item>
+  <form [formGroup]="form" (ngSubmit)="onSubmit()" (keyup.enter)="onSubmit()" >
+    <ion-item>
+      <ion-label position="floating"> ID Person </ion-label>
+      <ion-input
+      type="number"
+      placeholder="Introduce el ID de la persona"
+      formControlName="id_person"
+      ></ion-input>
+    </ion-item>
+    
+    <ion-item>
+      <ion-label position="floating"> ID Task </ion-label>
+      <ion-input
+      type="number"
+      placeholder="Introduce el ID de la tarea"
+      formControlName="id_task"
+      ></ion-input>
+    </ion-item>
+
+    
+    <ion-item>
+      <ion-label position="floating"> Date time </ion-label>
+      <ion-input
+      type="text"
+      placeholder="Introduce la fecha de finalización"
+      formControlName="dateTime"
+      ></ion-input>
+    </ion-item>
+
+    <ion-button [disabled]="!form.valid" type="submit">{{mode=="Edit"?"Modificar":"Añadir"}}</ion-button> 
+  </form>
+</ion-content>
+
+<!-- <ion-content>
+  <ion-item>Formulario usuario</ion-item>
+  <form>
+    <ion-item>
+      <ion-label position="floating"> Nombre </ion-label>
+      <ion-input
+      type="text"
+      placeholder="Introduce tu nombre"
+      formControlName="name"
+      ></ion-input>
+    </ion-item>
+    
+    <ion-item>
+      <ion-label position="floating"> Apellidos </ion-label>
+      <ion-input
+      type="text"
+      placeholder="Introduce tus apellidos"
+      formControlName="surname"
+      ></ion-input>
+    </ion-item>
+
+    
+    <ion-item>
+      <ion-label position="floating"> Mote </ion-label>
+      <ion-input
+      type="text"
+      placeholder="Introduce tu mote"
+      formControlName="nickname"
+      ></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating"> Edad </ion-label>
+      <ion-input
+      type="number"
+      placeholder="Introduce tu edad"
+      formControlName="age"
+      ></ion-input>
+    </ion-item>
+
+    <ion-button>Submit</ion-button> 
+  </form>
+</ion-content>
+  -->
