@@ -21,6 +21,8 @@ export class AssignmentsService {
       created_at:"yhtjtyj"
     }
   ]
+
+  id:number = this.assignmets.length+1;
   constructor() {
 
   }
@@ -31,6 +33,25 @@ export class AssignmentsService {
 
   public getAssignments(): Assignment[]{
     return this.assignmets;
+  }
+
+  addAssignment(assignment:Assignment){
+    assignment.id = this.id++;
+    this.assignmets.push(assignment);
+  }
+
+  public updateAssignment(assignment:Assignment){
+    
+    var _assignment = this.assignmets.find(p=>p.id==assignment.id);
+    if(_assignment){
+      _assignment.id_person = assignment.id_person;
+      _assignment.id_task = assignment.id_task;
+      _assignment.dateTime = assignment.dateTime;
+    }
+  }
+
+  deleteAssignmentById(id:number){
+    this.assignmets = this.assignmets.filter(p=>p.id != id); 
   }
 
 

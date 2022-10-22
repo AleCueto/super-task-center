@@ -46,10 +46,10 @@ export class TasksPage implements OnInit {
       if(result && result.data){
         switch(result.data.mode){
           case 'New':
-            this.taskService.addPerson(result.data.task);
+            this.taskService.addTask(result.data.task);
             break;
           case 'Edit':
-            this.taskService.updatePerson(result.data.task);
+            this.taskService.updateTask(result.data.task);
             break;
           default:
         }
@@ -86,7 +86,7 @@ export class TasksPage implements OnInit {
           text: 'Borrar',
           role: 'confirm',
           handler: () => {
-            this.taskService.deletePersonById(task.id);
+            this.taskService.deleteTaskById(task.id);
           },
         },
       ],

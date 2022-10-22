@@ -12,35 +12,35 @@ export class PeopleService {
       name: 'María',
       surname: 'García',
       age: 43,
-      image: 'https://drive.google.com/uc?export=view&id=1F_zIZQEgCdg-6xAN9UbxnZFNG_LwmHuz'
+      image: 'https://thispersondoesnotexist.com/image'
     },
     {
       id: 1,
       name: 'Estefanía',
       surname: 'Jiménez',
       age: 34,
-      image: 'https://drive.google.com/uc?export=view&id=1Q2dh_kkinjUYAYOX4Kya0kwuhzSegwgc'
+      image: 'https://thispersondoesnotexist.com/image'
     },
     {
       id: 2,
       name: 'Laura',
       surname: 'Pérez',
       age: 23,
-      image: 'https://drive.google.com/uc?export=view&id=1_Nbs98dofLr8nd8CoychguFbWghwlIaa'
+      image: 'https://thispersondoesnotexist.com/image'
     },
     {
       id: 3,
       name: 'Andrés',
       surname: 'Ramírez',
       age: 20,
-      image: 'https://drive.google.com/uc?export=view&id=14NYBqexrAwPR9Q_BcTCSmBObbNO461xx'
+      image: 'https://thispersondoesnotexist.com/image'
     },
     {
       id: 4,
       name: 'Manuela',
       surname: 'Escobar',
       age: 19,
-      image: 'https://drive.google.com/uc?export=view&id=1_CCAicgHcb5YkCz90zf_G9-lTfMHdvDx'
+      image: 'https://thispersondoesnotexist.com/image'
     },
   ]
 

@@ -12,22 +12,22 @@ import { AlertController, ModalController } from '@ionic/angular';
   styleUrls: ['./persons.page.scss'],
 })
 export class PersonsPage implements OnInit {
-  people: Person;
-  form:FormGroup;
+  // people: Person;
+  // form:FormGroup;
 
   constructor(
     private personService: PeopleService,
-    private fb:FormBuilder,
+    // private fb:FormBuilder,
     private modal:ModalController,
     private alert:AlertController) {
-    this.form = this.fb.group({
-      name:'',
-      surname:''
-    });
+    // this.form = this.fb.group({
+    //   name:'',
+    //   surname:''
+    // });
   }
 
   createPerson(){
-    console.log(this.form.value); //It is called when push the form button
+    // console.log(this.form.value); //It is called when push the form button
   }
 
   ngOnInit() {

@@ -5,10 +5,14 @@
 </ion-header>
 
 <ion-content>
+  <ion-item>
+    <ion-button (click)="onNewAssignment()" style="margin:10px;width:50px;height:50px;--border-radius:50%" slot="start" icon-only><ion-icon style="zoom:2" name="add-outline"></ion-icon></ion-button>
+  </ion-item>
+
   <ion-item *ngFor="let assignment of getAssignments()">
     <app-assignment [assignmentInput]="assignment"></app-assignment>
-    <!-- <app-person  [assigments]="person"></app-person>
-    <ion-button (click)="onEditPerson(person)"><ion-icon name="create-outline"></ion-icon></ion-button>
-    <ion-button (click)="onDeletePerson(person)"><ion-icon name="trash-outline"></ion-icon></ion-button> -->
+    <ion-button (click)="onEditAssignment(assignment)"><ion-icon name="create-outline"></ion-icon></ion-button>
+    <ion-button (click)="onDeleteAssignment(assignment)"><ion-icon name="trash-outline"></ion-icon></ion-button>
+    <!--<ion-button (click)="presentModal()"><ion-icon name="create-outline"></ion-icon></ion-button>-->
   </ion-item>
 </ion-content>
