@@ -1,9 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { PeopleService} from 'src/app/services/people.service';
-import { Person } from 'src/app/models/person.model';
-import { PersonComponent } from 'src/app/components/person/person.component';
-import { FormBuilder, FormGroup } from '@angular/forms';
-import { PersonDetailComponent } from 'src/app/components/person-detail/person-detail.component';
+import { PeopleService} from 'src/app/core/services/people.service';
+import { Person } from 'src/app/core/models/person.model';
+import { PersonDetailComponent } from 'src/app/core/components/person-detail/person-detail.component';
 import { AlertController, ModalController } from '@ionic/angular';
 
 @Component({

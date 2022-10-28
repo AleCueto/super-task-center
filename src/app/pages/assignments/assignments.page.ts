@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { AssignmentsService } from 'src/app/services/assignments.service';
-import { Assignment } from 'src/app/models/assignments.model';
-import { AssignmentComponent } from 'src/app/components/assignment/assignment.component';
+import { AssignmentsService } from 'src/app/core/services/assignments.service';
+import { Assignment } from 'src/app/core/models/assignments.model';
+import { AssignmentComponent } from 'src/app/core/components/assignment/assignment.component';
 import { AppComponent } from 'src/app/app.component';
-import { AssignmentDetailComponent } from 'src/app/components/assignment-detail/assignment-detail.component';
+import { AssignmentDetailComponent } from 'src/app/core/components/assignment-detail/assignment-detail.component';
 import { ModalController, AlertController } from '@ionic/angular';
 
 @Component({

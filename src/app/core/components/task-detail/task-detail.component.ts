@@ -1,7 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { Task } from 'src/app/models/task.model';
+import { Task } from 'src/app/core/models/task.model';
 import { Form, FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { TasksService } from 'src/app/services/tasks.service';
+import { TasksService } from 'src/app/core/services/tasks.service';
 import { ModalController } from '@ionic/angular';
 
 @Component({

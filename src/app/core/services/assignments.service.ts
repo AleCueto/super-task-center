@@ -1,24 +1,30 @@
 import { Injectable } from '@angular/core';
 import { Assignment } from '../models/assignments.model';
+import *  as moment from 'moment-timezone';
+
+
 
 @Injectable({
   providedIn: 'root'
 })
 export class AssignmentsService {
+
+  momentjs = moment;
+  
   public assignmets:Assignment[] = [
     {
       id:1,
       id_person:1,
       id_task:1,
-      dateTime:"ferfwfw",
-      created_at:"rggwge"
+      dateTime: this.momentjs().add(1, 'days').toLocaleString(),
+      created_at:this.momentjs().toLocaleString()
     },
     {
       id:2,
       id_person:2,
       id_task:2,
-      dateTime:"rggeggeg",
-      created_at:"yhtjtyj"
+      dateTime: this.momentjs().add(1, 'days').toLocaleString(),
+      created_at:this.momentjs().toLocaleString()
     }
   ]
 
@@ -51,7 +57,7 @@ export class AssignmentsService {
   }
 
   deleteAssignmentById(id:number){
-    this.assignmets = this.assignmets.filter(p=>p.id != id); 
+    this.assignmets = this.assignmets.filter(p=>p.id != id);
   }
 
 

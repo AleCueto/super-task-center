@@ -1,8 +1,8 @@
 import { Component,Input, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ModalController } from '@ionic/angular';
-import { Assignment } from 'src/app/models/assignments.model';
-import { AssignmentsService } from 'src/app/services/assignments.service';
+import { Assignment } from 'src/app/core/models/assignments.model';
+import { AssignmentsService } from 'src/app/core/services/assignments.service';
 
 @Component({
   selector: 'app-assignment-detail',

@@ -33,6 +33,15 @@
       placeholder="Introduce la fecha de finalización"
       formControlName="dateTime"
       ></ion-input>
+      
+      <ion-datetime-button datetime="datetime"></ion-datetime-button>
+
+      <ion-modal [keepContentsMounted]="true">
+        <ng-template>
+          <ion-datetime id="datetime"></ion-datetime>
+        </ng-template>
+      </ion-modal>
+
     </ion-item>
 
     <ion-button [disabled]="!form.valid" type="submit">{{mode=="Edit"?"Modificar":"Añadir"}}</ion-button> 

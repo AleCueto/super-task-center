@@ -1,11 +1,11 @@
 import { Component, OnInit } from '@angular/core';
-import { TasksService } from 'src/app/services/tasks.service';
+import { TasksService } from 'src/app/core/services/tasks.service';
 TasksService;
-import { Task } from 'src/app/models/task.model';
-import { PersonComponent } from 'src/app/components/person/person.component';
+import { Task } from 'src/app/core/models/task.model';
+import { PersonComponent } from 'src/app/core/components/person/person.component';
 import { Form, FormBuilder, FormGroup } from '@angular/forms';
 
-import { TaskDetailComponent } from 'src/app/components/task-detail/task-detail.component';
+import { TaskDetailComponent } from 'src/app/core/components/task-detail/task-detail.component';
 
 import { AlertController, ModalController } from '@ionic/angular';
 
