@@ -8,7 +8,7 @@ import { Person } from '../models/person.model';
 export class PeopleService {
   public _people: Person[] = [
     {
-      id: 0,
+      id: 5,
       name: 'María',
       surname: 'García',
       age: 43,
@@ -51,8 +51,8 @@ export class PeopleService {
     return this._people;
   }
 
-  public getPeopleById(id: number): Person{
-    return this._people[id];
+  public getPeopleById(id: number){
+    return this._people.find(p=>p.id==id);
   }
 
   addPerson(person:Person){

@@ -33,8 +33,8 @@ export class AssignmentsService {
 
   }
 
-  public getAssignmentById(id:number):Assignment{
-    return this.assignmets[id];
+  public getAssignmentById(id:number){
+    return this.assignmets.find(a=>a.id==id);
   }
 
   public getAssignments(): Assignment[]{

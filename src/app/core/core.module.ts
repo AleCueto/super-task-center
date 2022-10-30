@@ -20,9 +20,10 @@ import { AssignmentsPageRoutingModule } from '../pages/assignments/assignments-r
 import { AssignmentsPage } from '../pages/assignments/assignments.page';
 import { AssignmentComponent } from './components/assignment/assignment.component';
 import { AssignmentDetailComponent } from './components/assignment-detail/assignment-detail.component';
+import { PersonSelectableComponent } from './components/person-selectable/person-selectable.component';
 
 @NgModule({
-  declarations: [TasksPage, TaskComponent ,TaskDetailComponent, PersonsPage, PersonComponent, PersonDetailComponent, AssignmentsPage, AssignmentComponent, AssignmentDetailComponent],
+  declarations: [TasksPage, TaskComponent ,TaskDetailComponent, PersonsPage, PersonComponent, PersonDetailComponent, AssignmentsPage, AssignmentComponent, AssignmentDetailComponent, PersonSelectableComponent],
   imports: [
     CommonModule,
     FormsModule,
@@ -33,15 +34,17 @@ import { AssignmentDetailComponent } from './components/assignment-detail/assign
     // AssignmentsPageRoutingModule
   ],
   exports:[
-    // TasksPage, 
-    // TaskComponent,
-    // TaskDetailComponent,
-    // PersonsPage, 
-    // PersonComponent,
-    // PersonDetailComponent,
-    // AssignmentsPage,
-    // AssignmentComponent,
-    // AssignmentDetailComponent
+    CommonModule,
+    FormsModule,
+    ReactiveFormsModule,
+    PersonDetailComponent,
+    IonicModule,
+    TaskComponent,
+    PersonComponent,
+    TaskDetailComponent,
+    AssignmentDetailComponent,
+    AssignmentComponent,
+    PersonSelectableComponent
   ]
 })
 export class CoreModule { 
