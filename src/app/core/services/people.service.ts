@@ -61,7 +61,6 @@ export class PeopleService {
 
   public getPeopleById(id: number){
     return this._people.find(p=>p.id==id);
-    this.peopleSubject.next(this._people);
   }
 
   addPerson(person:Person){

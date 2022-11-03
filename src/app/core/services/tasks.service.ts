@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { BehaviorSubject } from 'rxjs';
 import { Task } from '../models/task.model';
 
 @Injectable({
@@ -39,7 +40,11 @@ export class TasksService {
       image: "https://picsum.photos/200/300", //url to an image
     }
 
-  ]
+  ];
+
+  private taskSubject:BehaviorSubject<Task[]> = new BehaviorSubject(this._tasks);
+  public task$ = this.taskSubject.asObservable();
+
 
   id:number = this._tasks.length+1;
   constructor() { }
@@ -55,6 +60,7 @@ export class TasksService {
   addTask(task:Task){
     task.id = this.id++;
     this._tasks.push(task);
+    this.taskSubject.next(this._tasks);
   }
 
   updateTask(task:Task){
@@ -66,12 +72,14 @@ export class TasksService {
       _task.description = task.description;
       // _person.nickname = person.nickname;
       // _person.picture = person.picture;
+      this.taskSubject.next(this._tasks);
     }
     
   }
 
   deleteTaskById(id:number){
     this._tasks = this._tasks.filter(p=>p.id != id); 
+    this.taskSubject.next(this._tasks);
   }
 
 

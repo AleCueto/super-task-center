@@ -58,7 +58,7 @@ export class TasksPage implements OnInit {
   }
 
   getTasks(){
-    return this.taskService.getTasks();
+    return this.taskService.task$;
   }
 
 

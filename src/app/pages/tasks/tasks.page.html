@@ -11,7 +11,7 @@
   <!-- <ion-grid> -->
     <!-- <ion-row> -->
       <!-- <ion-col size="6"> -->
-        <ion-item *ngFor="let task of getTasks()">
+        <ion-item *ngFor="let task of getTasks() | async">
           <app-task  [taskInput]="task"></app-task>
           <ion-button (click)="onEditTask(task)"><ion-icon name="create-outline"></ion-icon></ion-button>
           <ion-button (click)="onDeleteTask(task)"><ion-icon name="trash-outline"></ion-icon></ion-button>

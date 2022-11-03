@@ -136,7 +136,7 @@ export class AssignmentsPage implements OnInit {
 
 
   getAssignments(){
-    return this.assignmentService.getAssignments();
+    return this.assignmentService.assignment$;
   }
 
   async presentAssignmentForm(assignment){
