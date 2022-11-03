@@ -11,7 +11,7 @@
   <!-- <ion-grid> -->
     <!-- <ion-row> -->
       <!-- <ion-col size="6"> -->
-        <ion-item *ngFor="let person of getPeople()">
+        <ion-item *ngFor="let person of getPeople() | async" >
           <app-person  [personInput]="person"></app-person>
           <ion-button (click)="onEditPerson(person)"><ion-icon name="create-outline"></ion-icon></ion-button>
           <ion-button (click)="onDeletePerson(person)"><ion-icon name="trash-outline"></ion-icon></ion-button>

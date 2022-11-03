@@ -39,7 +39,7 @@ export class PersonsPage implements OnInit {
 
 
   getPeople(){
-    return this.personService.getPeople();
+    return this.personService.people$;
   }
 
   async presentPersonForm(person:Person){
