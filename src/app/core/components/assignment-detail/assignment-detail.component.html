@@ -28,24 +28,27 @@
     </ion-item> -->
     <app-task-selectable formControlName="id_task"></app-task-selectable>
     
-    <ion-item>
+
+    <app-date-time-selectable formControlName="dateTime"></app-date-time-selectable>
+
+    <!-- <ion-item>
       <ion-label position="floating"> Date time </ion-label>
       <ion-input
       type="text"
       placeholder="Introduce la fecha de finalización"
       formControlName="dateTime"
-      ></ion-input>
+      ></ion-input> -->
       
       <!-- <ion-datetime-button datetime="datetime"></ion-datetime-button> -->
 
-      <ion-modal [keepContentsMounted]="true">
+      <!-- <ion-modal [keepContentsMounted]="true">
         <ng-template>
           <ion-datetime id="datetime"></ion-datetime>
         </ng-template>
       </ion-modal>
 
     </ion-item>
-
+  -->
     <ion-button [disabled]="!form.valid" type="submit">{{mode=="Edit"?"Modificar":"Añadir"}}</ion-button> 
   </form>
 </ion-content>

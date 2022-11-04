@@ -22,9 +22,10 @@ import { AssignmentComponent } from './components/assignment/assignment.componen
 import { AssignmentDetailComponent } from './components/assignment-detail/assignment-detail.component';
 import { PersonSelectableComponent } from './components/person-selectable/person-selectable.component';
 import { TaskSelectableComponent } from './components/task-selectable/task-selectable.component';
+import { DateTimeSelectableComponent } from './components/date-time-selectable/date-time-selectable.component';
 
 @NgModule({
-  declarations: [TasksPage, TaskComponent ,TaskDetailComponent, PersonsPage, PersonComponent, PersonDetailComponent, AssignmentsPage, AssignmentComponent, AssignmentDetailComponent, PersonSelectableComponent, TaskSelectableComponent],
+  declarations: [TasksPage, TaskComponent ,TaskDetailComponent, PersonsPage, PersonComponent, PersonDetailComponent, AssignmentsPage, AssignmentComponent, AssignmentDetailComponent, PersonSelectableComponent, TaskSelectableComponent, DateTimeSelectableComponent],
   imports: [
     CommonModule,
     FormsModule,
@@ -45,7 +46,8 @@ import { TaskSelectableComponent } from './components/task-selectable/task-selec
     TaskDetailComponent,
     AssignmentDetailComponent,
     AssignmentComponent,
-    PersonSelectableComponent
+    PersonSelectableComponent,
+    DateTimeSelectableComponent
   ]
 })
 export class CoreModule { 

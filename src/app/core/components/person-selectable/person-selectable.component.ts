@@ -42,7 +42,7 @@ export class PersonSelectableComponent implements OnInit, ControlValueAccessor {
   //From ControlValueAccessor interface
   writeValue(value: any) {
       this.selectedPerson = this.peopleSvc.getPeopleById(value);
-      console.log("eferf");
+      // console.log("eferf");
   }
 
   //From ControlValueAccessor interface
