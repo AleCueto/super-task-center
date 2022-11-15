@@ -8,6 +8,7 @@ import { Form, FormBuilder, FormGroup } from '@angular/forms';
 import { TaskDetailComponent } from 'src/app/core/components/task-detail/task-detail.component';
 
 import { AlertController, ModalController } from '@ionic/angular';
+import { AssignmentsService } from 'src/app/core/services/assignments.service';
 
 @Component({
   selector: 'app-tasks',
@@ -22,7 +23,8 @@ export class TasksPage implements OnInit {
     private taskService: TasksService,
     private fb:FormBuilder,
     private modal:ModalController,
-    private alert:AlertController
+    private alert:AlertController,
+    private assyngSvc:AssignmentsService
     ) {
     this.form = this.fb.group({
       name:'',
@@ -98,7 +100,29 @@ export class TasksPage implements OnInit {
   }
 
   onDeleteTask(task){
+
+    if(!this.assyngSvc.getAssignmentById(task.id))
     this.onDeleteAlert(task);
-      
+    else
+    this.onTaskExistsAlert(task);
+  
+}
+
+  async onTaskExistsAlert(task){
+    const alert = await this.alert.create({
+      header: 'Error',
+      message: "La tarea que desea borrar está asignada. Quite la asignación.",
+      buttons: [
+        {
+          text: 'Cerrar',
+          role: 'close',
+          handler: () => {
+          },
+        },
+      ],
+    });
+  
+    await alert.present();
   }
+
 }
