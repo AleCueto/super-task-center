@@ -23,13 +23,24 @@ import { AssignmentDetailComponent } from './components/assignment-detail/assign
 import { PersonSelectableComponent } from './components/person-selectable/person-selectable.component';
 import { TaskSelectableComponent } from './components/task-selectable/task-selectable.component';
 import { DateTimeSelectableComponent } from './components/date-time-selectable/date-time-selectable.component';
+import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
+import { HttpClientModule, HttpClient } from '@angular/common/http';
+import { createTranslateLoader } from './utils/translate';
 
 @NgModule({
   declarations: [TasksPage, TaskComponent ,TaskDetailComponent, PersonsPage, PersonComponent, PersonDetailComponent, AssignmentsPage, AssignmentComponent, AssignmentDetailComponent, PersonSelectableComponent, TaskSelectableComponent, DateTimeSelectableComponent],
   imports: [
     CommonModule,
     FormsModule,
-    IonicModule,
+    IonicModule.forRoot(),
+    HttpClientModule,
+    TranslateModule.forChild({
+    loader: {
+    provide: TranslateLoader,
+    useFactory: (createTranslateLoader),
+    deps: [HttpClient]
+    }
+    }),
     ReactiveFormsModule,
     // PersonsPageRoutingModule,
     // TasksPageRoutingModule,
@@ -47,7 +58,9 @@ import { DateTimeSelectableComponent } from './components/date-time-selectable/d
     AssignmentDetailComponent,
     AssignmentComponent,
     PersonSelectableComponent,
-    DateTimeSelectableComponent
+    DateTimeSelectableComponent,
+    TranslateModule,
+    HttpClientModule
   ]
 })
 export class CoreModule { 

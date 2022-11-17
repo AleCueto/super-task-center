@@ -1,0 +1,37 @@
+{
+
+
+
+    "home":{
+        "title":"home"
+    },
+
+    "persons":{
+        "title":"People"
+    },
+
+    "tasks":{
+        "title":"Tasks",
+        "data":"Task data"
+    },
+    "attributes":{
+        "name":"Name",
+        "description":"Description",
+        "surname":"Surname",
+        "nickname":"Nickname",
+        "age":"Age",
+        "time_in_seconds":"Time in seconds"
+    },
+    "generics":{
+        "add":"Add",
+        "close":"Close",
+        "modify":"Modify"
+    },
+    "assignment":{
+        "select_person":"Select person",
+        "select_task":"Select task",
+        "select_dateTime":"Select time and hour"
+    }
+
+
+}

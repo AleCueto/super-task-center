@@ -8,7 +8,7 @@
   <ion-item>Formulario {{mode=="Edit"?"edición":"creación"}} usuario</ion-item>
   <form [formGroup]="form" (ngSubmit)="onSubmit()" (keyup.enter)="onSubmit()">
     <ion-item>
-      <ion-label position="floating"> Nombre </ion-label>
+      <ion-label position="floating"> {{"attributes.name" |translate}} </ion-label>
       <ion-input
       type="text"
       placeholder="Introduce tu nombre"
@@ -17,7 +17,7 @@
     </ion-item>
     
     <ion-item>
-      <ion-label position="floating"> Apellidos </ion-label>
+      <ion-label position="floating"> {{"attributes.surname" |translate}}  </ion-label>
       <ion-input
       type="text"
       placeholder="Introduce tus apellidos"
@@ -27,7 +27,7 @@
 
     
     <ion-item>
-      <ion-label position="floating"> Mote </ion-label>
+      <ion-label position="floating"> {{"attributes.nickname" |translate}} </ion-label>
       <ion-input
       type="text"
       placeholder="Introduce tu mote"
@@ -36,7 +36,7 @@
     </ion-item>
 
     <ion-item>
-      <ion-label position="floating"> Edad </ion-label>
+      <ion-label position="floating"> {{"attributes.age" |translate}} </ion-label>
       <ion-input
       type="number"
       placeholder="Introduce tu edad"

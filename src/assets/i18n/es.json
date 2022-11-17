@@ -1,0 +1,35 @@
+{
+
+    "home":{
+        "title":"Principal"
+    },
+
+
+    "persons":{
+        "title":"Personas"
+    },
+
+    "tasks":{
+        "title":"Tareas",
+        "data":"Datos de la tarea"
+    },
+    "attributes":{
+        "name":"Nombre",
+        "description":"Descripción",
+        "surname":"Apellidos",
+        "nickname":"Mote",
+        "age":"Edad",
+        "time_in_seconds":"Tiempo en segundos"
+    },
+    "generics":{
+        "add":"Añadir",
+        "close":"Cerrar",
+        "modify":"MOdificar"
+    },
+    "assignment":{
+        "select_person":"Selecciona una persona",
+        "select_task":"Selecciona una tarea",
+        "select_dateTime":"Selecciona una fecha y hora",
+        "warning_remove":"¿Está seguro de que desea borrar esta asignación?"
+    }
+}

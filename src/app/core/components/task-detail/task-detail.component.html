@@ -1,6 +1,6 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>Datos de la tarea</ion-title>
+    <ion-title>{{"tasks.data" |translate}}</ion-title>
   </ion-toolbar>
 </ion-header>
 
@@ -8,7 +8,7 @@
   <ion-item>Formulario {{mode=="Edit"?"edición":"creación"}} de una tarea</ion-item>
   <form [formGroup]="form" (ngSubmit)="onSubmit()" (keyup.enter)="onSubmit()">
     <ion-item>
-      <ion-label position="floating"> Nombre </ion-label>
+      <ion-label position="floating"> {{"attributes.name" |translate}} </ion-label>
       <ion-input
       type="text"
       placeholder="Introduce tu nombre"
@@ -17,7 +17,7 @@
     </ion-item>
     
     <ion-item>
-      <ion-label position="floating"> Tiempo en segundos </ion-label>
+      <ion-label position="floating"> {{"attributes.time_in_seconds" |translate}}  </ion-label>
       <ion-input
       type="number"
       placeholder="Introduce tus apellidos"
@@ -27,7 +27,7 @@
 
     
     <ion-item>
-      <ion-label position="floating"> Descripción </ion-label>
+      <ion-label position="floating"> {{"attributes.description" |translate}}  </ion-label>
       <ion-input
       type="text"
       placeholder="Introduce tu mote"
