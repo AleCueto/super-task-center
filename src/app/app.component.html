@@ -2,20 +2,33 @@
   <ion-split-pane contentId="main-content">
     <ion-menu contentId="main-content" type="overlay">
       <ion-content>
+        <ion-fab slot="fixed" vertical="top" horizontal="start">
+          <ion-fab-button>
+            <ion-icon name="language-outline"></ion-icon>
+          </ion-fab-button>
+          <ion-fab-list side="end">
+            <ion-fab-button (click)="changeLanguage('en')">
+              <ion-icon src="../assets/images/gb.svg"></ion-icon>
+            </ion-fab-button>
+            <ion-fab-button (click)="changeLanguage('es')">
+              <ion-icon src="../assets/images/es.svg"></ion-icon>
+            </ion-fab-button>
+          </ion-fab-list>
+        </ion-fab>
+        
         <ion-list id="inbox-list">
-          <ion-list-header>Header</ion-list-header>
-          <ion-note>{{'home.title' | translate}}</ion-note>
+          
+          <ion-note></ion-note>
 
           <ion-menu-toggle auto-hide="false" *ngFor="let p of appPages; let i = index">
             <ion-item routerDirection="root" [routerLink]="[p.url]" lines="none" detail="false" routerLinkActive="selected">
               <ion-icon slot="start" [ios]="p.icon + '-outline'" [md]="p.icon + '-sharp'"></ion-icon>
-              <ion-label>{{ p.title }}</ion-label>
+              <ion-label>{{ p.title | translate }}</ion-label>
             </ion-item>
           </ion-menu-toggle>
         </ion-list>
 
         <ion-list id="labels-list">
-          <ion-list-header>Labels</ion-list-header>
 
           <ion-item *ngFor="let label of labels" lines="none">
             <ion-icon slot="start" ios="bookmark-outline" md="bookmark-sharp"></ion-icon>

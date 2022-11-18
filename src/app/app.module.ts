@@ -16,7 +16,8 @@ import { CoreModule } from './core/core.module';
 
 @NgModule({
   declarations: [AppComponent],
-  imports: [BrowserModule, TranslateModule.forRoot({
+  imports: [BrowserModule,
+    TranslateModule.forRoot({
     loader: {
     provide: TranslateLoader,
     useFactory: (createTranslateLoader),

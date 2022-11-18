@@ -1,11 +1,10 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>Datos de la persona</ion-title>
+    <ion-title>{{"persons.data" | translate}}</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-  <ion-item>Formulario {{mode=="Edit"?"edición":"creación"}} usuario</ion-item>
   <form [formGroup]="form" (ngSubmit)="onSubmit()" (keyup.enter)="onSubmit()">
     <ion-item>
       <ion-label position="floating"> {{"attributes.name" |translate}} </ion-label>
@@ -44,7 +43,7 @@
       ></ion-input>
     </ion-item>
 
-    <ion-button [disabled]="!form.valid" type="submit">{{mode=="Edit"?"Modificar":"Añadir"}}</ion-button> 
+    <ion-button [disabled]="!form.valid" type="submit">{{(mode=="Edit"?"generics.modify" :"generics.add") |translate}}</ion-button> 
     <!-- Submit del modal -->
     <!-- (click)="createPerson()" -->
   </form>

@@ -3,11 +3,12 @@
 
 
     "home":{
-        "title":"home"
+        "title":"Home"
     },
 
     "persons":{
-        "title":"People"
+        "title":"People",
+        "data":"Person data"
     },
 
     "tasks":{
@@ -24,13 +25,19 @@
     },
     "generics":{
         "add":"Add",
+        "remove":"Remove",
         "close":"Close",
-        "modify":"Modify"
+        "cancel":"Cancel",
+        "modify":"Modify",
+        "warning_remove":"Are you sure you want to remove this entry?"
     },
     "assignment":{
+        "title":"Assignments",
+        "data":"Assignment data",
         "select_person":"Select person",
         "select_task":"Select task",
-        "select_dateTime":"Select time and hour"
+        "select_dateTime":"Select time and hour",
+        "remove_error":"The entry you want to remove is assignmed. Please change it."
     }
 
 

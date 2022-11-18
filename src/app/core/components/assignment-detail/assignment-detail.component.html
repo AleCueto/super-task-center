@@ -1,11 +1,10 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>Datos de la asignación</ion-title>
+    <ion-title>{{"assignment.data" | translate}}</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-  <ion-item>Formulario  {{mode=="Edit"?"edición":"creación"}} asignacion</ion-item>
   <form [formGroup]="form" (ngSubmit)="onSubmit()" (keyup.enter)="onSubmit()" >
 
     <!-- <ion-item>
@@ -49,7 +48,7 @@
 
     </ion-item>
   -->
-    <ion-button [disabled]="!form.valid" type="submit">{{mode=="Edit"?"Modificar":"Añadir"}}</ion-button> 
+    <ion-button [disabled]="!form.valid" type="submit">{{(mode=="Edit"?"generics.modify" :"generics.add") |translate}}</ion-button> 
   </form>
 </ion-content>
 

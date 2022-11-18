@@ -4,6 +4,8 @@ import { Person } from 'src/app/core/models/person.model';
 import { PersonDetailComponent } from 'src/app/core/components/person-detail/person-detail.component';
 import { AlertController, ModalController } from '@ionic/angular';
 import { AssignmentsService } from 'src/app/core/services/assignments.service';
+import { TranslateService } from '@ngx-translate/core';
+import { lastValueFrom } from 'rxjs';
 
 @Component({
   selector: 'app-persons',
@@ -19,6 +21,7 @@ export class PersonsPage implements OnInit {
     // private fb:FormBuilder,
     private modal:ModalController,
     private assyngSvc:AssignmentsService,
+    private translate:TranslateService,
     private alert:AlertController) {
     // this.form = this.fb.group({
     //   name:'',
@@ -80,17 +83,17 @@ export class PersonsPage implements OnInit {
 
   async onDeleteAlert(person){
     const alert = await this.alert.create({
-      header: '¿Está seguro de que desear borrar a la persona?',
+      header: await lastValueFrom(this.translate.get('generics.warning_remove')),
       buttons: [
         {
-          text: 'Cancelar',
+          text: await lastValueFrom(this.translate.get('generics.cancel')),
           role: 'cancel',
           handler: () => {
             console.log("Operacion cancelada");
           },
         },
         {
-          text: 'Borrar',
+          text: await lastValueFrom(this.translate.get('generics.remove')),
           role: 'confirm',
           handler: () => {
             this.personService.deletePersonById(person.id);
@@ -115,8 +118,8 @@ export class PersonsPage implements OnInit {
 
   async onPersonExistsAlert(task){
     const alert = await this.alert.create({
-      header: 'Error',
-      message: "La tarea que desea borrar está asignada. Quite la asignación.",
+      header: "Error",
+      message: await lastValueFrom(this.translate.get('assignment.remove_error')),
       buttons: [
         {
           text: 'Cerrar',

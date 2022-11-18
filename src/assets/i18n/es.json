@@ -1,12 +1,14 @@
 {
 
     "home":{
-        "title":"Principal"
+        "title":"Inicio"
     },
 
 
     "persons":{
-        "title":"Personas"
+        "title":"Personas",
+        "data":"Datos de la persona"
+
     },
 
     "tasks":{
@@ -23,13 +25,19 @@
     },
     "generics":{
         "add":"Añadir",
+        "remove":"Borrar",
         "close":"Cerrar",
-        "modify":"MOdificar"
+        "cancel":"Cancelar",
+        "modify":"Modificar",
+        "warning_remove":"¿Está seguro de que desea borrar esta entrada?"
+
     },
     "assignment":{
+        "title":"Asignaciones",
+        "data":"Datos de la asignación",
         "select_person":"Selecciona una persona",
         "select_task":"Selecciona una tarea",
         "select_dateTime":"Selecciona una fecha y hora",
-        "warning_remove":"¿Está seguro de que desea borrar esta asignación?"
+        "remove_error":"La entrada que desea borrar está asignada. Quite la asignación."
     }
 }

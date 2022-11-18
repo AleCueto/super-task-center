@@ -5,6 +5,8 @@ import { AssignmentComponent } from 'src/app/core/components/assignment/assignme
 import { AppComponent } from 'src/app/app.component';
 import { AssignmentDetailComponent } from 'src/app/core/components/assignment-detail/assignment-detail.component';
 import { ModalController, AlertController } from '@ionic/angular';
+import { TranslateService } from '@ngx-translate/core';
+import { lastValueFrom } from 'rxjs';
 
 @Component({
   selector: 'app-assignments',
@@ -114,7 +116,8 @@ export class AssignmentsPage implements OnInit {
     private assignmentService: AssignmentsService,
     // private fb:FormBuilder,
     private modal:ModalController,
-    private alert:AlertController) {
+    private alert:AlertController,
+    private translate:TranslateService,) {
     // this.form = this.fb.group({
     //   name:'',
     //   surname:''
@@ -175,17 +178,17 @@ export class AssignmentsPage implements OnInit {
 
   async onDeleteAlert(assignment){
     const alert = await this.alert.create({
-      header: '¿Está seguro de que desear borrar esta asignación?',
+      header: await lastValueFrom(this.translate.get('generics.warning_remove')),
       buttons: [
         {
-          text: 'Cancelar',
+          text: await lastValueFrom(this.translate.get('generics.cancel')),
           role: 'cancel',
           handler: () => {
             console.log("Operacion cancelada");
           },
         },
         {
-          text: 'Borrar',
+          text: await lastValueFrom(this.translate.get('generics.remove')),
           role: 'confirm',
           handler: () => {
             this.assignmentService.deleteAssignmentById(assignment.id);
